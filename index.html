@@ -11,14 +11,14 @@
 <style>
 html {
    min-height: 100%;
-   /*background-image: url(nelzbg_1920x1080.png);
+   background-image: url(nelzbg_1920x1080.png);
    background-size: cover;
    background-repeat: no-repeat;
-   background-position: center center;*/
-   background-color: #fdc658;
+   background-position: center top;
+   background-color: #fdc75a;
 }
     
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 970px) {
   html {
      background-image: url(nelzbg_450x801.png);
 	 background-position: center center;
@@ -38,34 +38,15 @@ body {
 
 /* CONTAINERS */
     
-    #despub{
-        margin-top: 8px;
-        margin-left: 60px;
-        float: left;
-        position: relative;
-        z-index: 1;
-    }
-    #mast{
-        margin-top: 50px;       
-        position: relative;
-        z-index: 3;
-    }
     
     #nav{
-        margin-top: -8px;
-        margin-right: 60px;
-        float:right;
-        position: relative;
-        z-index: 2;
+        position:fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 200px;
+        margin: auto;
     }
 
-    #nelzpill{
-        margin-top: 72px;
-        clear:both;
-        position: relative;
-        z-index: 4;
-    }
-    
     .nav {
         width: 160px;
     }
@@ -81,23 +62,14 @@ body {
     
 /* IMAGE CONTROL */
     
-    img.despub {
-        /*width: 60%;*/
-        width: 200px;
-    }
-    
-    img.mast {
-        /*width: 34%;*/
-        width: 400px;
+    img {
+        width:42%;
     }
     
     img.icon {
-        width:90%;}
-    
-    img.pill {
-        margin: auto; 
-        width: 600px;
+        width:90%;
     }
+    
     
 
 @keyframes bugfix {
@@ -122,9 +94,8 @@ body {
     </head>
 
     <body>
-        <div id="despub"><img class="despub" src="despub.png"></div>
         <div id="nav">
-        <table class="nav">
+        <table class="nav" align="center">
             <tr>
                 <td><a href="https://drive.google.com/file/d/1fLkg2G9XT__vUN_LVemXkmCrqME6AYZr/view?usp=sharing" target="_blank"><img class="icon" src="icons_folio_normal_160x160.png" onmouseover="this.src='icons_folio_hover_160x160.png'"
 onmouseout="this.src='icons_folio_normal_160x160.png'"></a></td>
@@ -135,7 +106,5 @@ onmouseout="this.src='icons_email_normal_160x160.png'"></a></td>
             </tr>
             </table>    
         </div>
-        <div id="mast" align="center"><img class="mast" src="nelzmast_desktop.png"></div>
-        <div id="nelzpill" align="center"><img class="pill" src="nelzpill.png"></div>
     </body>
 </html>
