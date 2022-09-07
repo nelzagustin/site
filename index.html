@@ -7,14 +7,14 @@
 	<meta name="keywords" content="nelson agustin, design, publishing">
 	<meta name="author" content="Nelson Agustin">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nelson Agustin | Graphic Design &amp; Publishing</title>
+<title>Nelson Agustin | Graphic Design + Publishing</title>
 <style>
 html {
    min-height: 100%;
-   background-image: url(nelzbg_1920x1080.png);
+   /*background-image: url(nelzbg_1920x1080.png);
    background-size: cover;
    background-repeat: no-repeat;
-   background-position: center center;
+   background-position: center center;*/
    background-color: #fdc658;
 }
     
@@ -32,14 +32,73 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden; /* Hide scrollbars */
 }
 
-  img {width:38%;}
-    #mast{
-        padding-top: 34px;
-            }
-    img.icon {width:50%;}
 
+/* CONTAINERS */
+    
+    #despub{
+        margin-top: 8px;
+        margin-left: 60px;
+        float: left;
+        position: relative;
+        z-index: 1;
+    }
+    #mast{
+        margin-top: 50px;       
+        position: relative;
+        z-index: 3;
+    }
+    
+    #nav{
+        margin-top: -8px;
+        margin-right: 60px;
+        float:right;
+        position: relative;
+        z-index: 2;
+    }
+
+    #nelzpill{
+        margin-top: 72px;
+        clear:both;
+        position: relative;
+        z-index: 4;
+    }
+    
+    .nav {
+        width: 160px;
+    }
+    
+    table {
+        width: 160px;
+    }
+    
+    td {
+    align-content: center;
+    text-align: center;}
+
+    
+/* IMAGE CONTROL */
+    
+    img.despub {
+        /*width: 60%;*/
+        width: 200px;
+    }
+    
+    img.mast {
+        /*width: 34%;*/
+        width: 400px;
+    }
+    
+    img.icon {
+        width:90%;}
+    
+    img.pill {
+        margin: auto; 
+        width: 600px;
+    }
+    
 
 @keyframes bugfix {
   from {
@@ -59,32 +118,24 @@ body {
 }
 
     
-    table {
-        /*width: 40%;*/
-        margin: 36px;
-    }
-    
-    td {
-    /*width: 160px;    */
-    align-content: center;
-    text-align: center;}
-    
 </style>
     </head>
 
     <body>
-        <div id="mast" align="center"><img src="nelzmast_desktop.png"></div>
-        <div align="center">
-        <table>
+        <div id="despub"><img class="despub" src="despub.png"></div>
+        <div id="nav">
+        <table class="nav">
             <tr>
                 <td><a href="https://drive.google.com/file/d/1fLkg2G9XT__vUN_LVemXkmCrqME6AYZr/view?usp=sharing" target="_blank"><img class="icon" src="icons_folio_normal_160x160.png" onmouseover="this.src='icons_folio_hover_160x160.png'"
 onmouseout="this.src='icons_folio_normal_160x160.png'"></a></td>
                 <td><a href="http://www.linkedin.com/in/nelzagustin" target="_blank"><img class="icon" src="icons_LinkedIn_normal_160x160.png" onmouseover="this.src='icons_LinkedIn_hover_160x160.png'"
 onmouseout="this.src='icons_LinkedIn_normal_160x160.png'"></a></td>
-                <td><a href="mailto:nelzagustin@gmail.com?subject=Inquiry%20from%20the%20website"><img class="icon" src="icons_email_normal_160x160.png" onmouseover="this.src='icons_email_hover_160x160.png'"
+                <td><a href="mailto:agustin@nelz.ca?subject=Inquiry%20from%20the%20website"><img class="icon" src="icons_email_normal_160x160.png" onmouseover="this.src='icons_email_hover_160x160.png'"
 onmouseout="this.src='icons_email_normal_160x160.png'"></a></td>
             </tr>
             </table>    
         </div>
+        <div id="mast" align="center"><img class="mast" src="nelzmast_desktop.png"></div>
+        <div id="nelzpill" align="center"><img class="pill" src="nelzpill.png"></div>
     </body>
 </html>
