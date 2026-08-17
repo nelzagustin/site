@@ -9,108 +9,131 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nelson Agustin | Graphic Design + Publishing</title>
 <style>
-html {
-   min-height: 100%;
-   background-image: url(nelzbg_1920x1080.png);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center top;
-   background-color: #000;
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('woff/Rajdhani-Bold.woff') format('woff');
+  font-weight: bold;
 }
-    
-@media only screen and (max-width: 970px) {
-  html {
-     background-image: url(nelzbg_450x801.png);
-     background-size: auto;
-	 background-position: center center;
-  }
-  /*img {width:70% !important;}*/
-    img.icon {width:90% !important;}
-    
-    table {
-        width: 180px !important;
-    }
-    
-    div#nav {bottom: 120px;}
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('woff/Rajdhani-Regular.woff') format('woff');
+  font-weight: normal;
 }
 
+html {
+   min-height: 100%;
+   background-image: url(img/1920x1080.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center bottom;
+   background-color: #414142;
+}
+
+@media only screen and (min-width: 1728px) {
+  html {
+    background-size: 1728px 972px;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  html {
+     background-image: url(img/970x801.png);
+     background-size: auto;
+     background-position: center bottom;
+  }
+}
 body {
   margin: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden; /* Hide scrollbars */
 }
-
-
 /* CONTAINERS */
     
-    
-    #nav{
-        position:fixed;
-        left: 50%;
-        transform: translate(-50%, 0);
-        bottom: 120px;
-        margin: auto;
-    }
-
-    .nav {
-        width: 160px;
-    }
-    
-    table {
-        width: 160px;
-    }
-    
-    td {
-    align-content: center;
-    text-align: center;}
-
-    
-/* IMAGE CONTROL */
-    
-    img {
-        width:42%;
-    }
-    
-    img.icon {
-        width:90%;
-    }
-    
-    
-
-@keyframes bugfix {
-  from {
-    padding: 0;
-  }
-  to {
-    padding: 0;
+#mast {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  margin: 0px;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+@media only screen and (max-width: 970px) {
+  #mast {
+    position: static;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    margin: 30px auto 0;
   }
 }
-@-webkit-keyframes bugfix {
-  from {
+#name {
+  font-family: 'Rajdhani';
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  color: #FFF;
+  white-space: nowrap;
+}
+#tag {
+  font-family: 'Rajdhani';
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 6px;
+  color: #FFF;
+  white-space: nowrap;
+}    
+#nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px;
+  margin: 0px;
+  display: flex;
+  gap: 35px;
+}
+@media only screen and (max-width: 970px) {
+  #nav {
+    position: static;
+    margin: 10px auto 0;
     padding: 0;
-  }
-  to {
-    padding: 0;
+    justify-content: center;
+    width: fit-content;
   }
 }
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity 0.15s ease;
+}
+.icon:hover {
+  opacity: 0.25;
+}
+.icon-folio { background-image: url('img/folio.png'); }
+.icon-decks { background-image: url('img/decks.png'); }
+.icon-books { background-image: url('img/books.png'); }
+.icon-contact { background-image: url('img/contact.png'); }
 
-    
 </style>
     </head>
-
     <body>
-        <div id="nav">
-        <table class="nav" align="center">
-            <tr>
-                <td><a href="https://drive.google.com/file/d/1fLkg2G9XT__vUN_LVemXkmCrqME6AYZr/view?usp=sharing" target="_blank"><img class="icon" src="icons_folio_normal_160x160.png" onmouseover="this.src='icons_folio_hover_160x160.png'"
-onmouseout="this.src='icons_folio_normal_160x160.png'"></a></td>
-                <!--<td><a href="http://www.linkedin.com/in/nelzagustin" target="_blank"><img class="icon" src="icons_LinkedIn_normal_160x160.png" onmouseover="this.src='icons_LinkedIn_hover_160x160.png'"
-onmouseout="this.src='icons_LinkedIn_normal_160x160.png'"></a></td>-->
-                <td><a href="mailto:agustin@nelz.ca?subject=Inquiry%20from%20the%20website"><img class="icon" src="icons_email_normal_160x160.png" onmouseover="this.src='icons_email_hover_160x160.png'"
-onmouseout="this.src='icons_email_normal_160x160.png'"></a></td>
-            </tr>
-            </table>    
+        <div id="mast">
+  		<div id="name">NELSON AGUSTÍN</div>
+		<div id="tag">design + publishing</div>
         </div>
+	<div id="nav">
+  		<div class="nav-item"><a href="https://drive.google.com/file/d/1fLkg2G9XT__vUN_LVemXkmCrqME6AYZr/view?usp=sharing" target="_blank"><span class="icon icon-folio"></span></a></div>
+  		<div class="nav-item"><a href="https://www.makeplayingcards.com/sell/customoracle" target="_blank"><span class="icon icon-decks"></span></a></div>
+  		<div class="nav-item"><a href="https://www.amazon.ca/stores/Nelson-Agustin/author/B09S5KF1WV/allbooks" target="_blank"><span class="icon icon-books"></span></a></div>
+  		<div class="nav-item"><a href="mailto:&#97;&#103;&#117;&#115;&#116;&#105;&#110;&#64;&#110;&#101;&#108;&#122;&#46;&#99;&#97;?subject=Inquiry%20from%20the%20website"><span class="icon icon-contact"></span></a></div>
+	</div>
     </body>
 </html>
